@@ -1,0 +1,12 @@
+[configuration]
+
+entry_symbol = "extension_library_init"
+compatibility_minimum = 4.5
+reloadable = true
+
+[libraries]
+
+windows.debug.x86_64 = "res://bin/cayeditor.windows.64.debug.dll"
+windows.release.x86_64 = "res://bin/cayeditor.windows.64.release.dll"
+linux.debug.x86_64 = "res://bin/libcayeditor.linux.64.debug.so"
+linux.release.x86_64 = "res://bin/libcayeditor.linux.64.release.so"
