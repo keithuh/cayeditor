@@ -18,7 +18,7 @@
   #define stdcall __cdecl
 #endif
 
-namespace ns::inline utils {
+namespace cay::inline utils {
     namespace detail {
         template <typename H>
         void to_arg_vec_impl(std::vector<godot::String>& s, H&& h)

@@ -2,10 +2,10 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "Main.hpp"
 #include "extension_interface.hpp"
+#include "main.hpp"
 
-namespace ns {
+namespace cay {
     void initialize_extension_module(godot::ModuleInitializationLevel init_level)
     {
         if (init_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE)

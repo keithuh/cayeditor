@@ -7,7 +7,7 @@
 
 #include "core/concepts.hpp"
 
-namespace ns::inline utils {
+namespace cay::inline utils {
     template <VariantCompatible T>
     struct variant_traits
     {

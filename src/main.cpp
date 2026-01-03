@@ -2,10 +2,10 @@
 #include <godot_cpp/classes/resource_loader.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
 
-#include "Main.hpp"
+#include "main.hpp"
 #include "util/engine.hpp"
 
-namespace ns {
+namespace cay {
     void Main::_notification(int p_notification)
     {
         switch (p_notification)

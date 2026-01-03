@@ -12,7 +12,7 @@ namespace godot {
     class Object;
 }
 
-namespace ns::inline utils {
+namespace cay::inline utils {
     template <auto S>
     concept CompileTimeStr = std::same_as<decltype(S), std::string_view> ||
                              std::same_as<decltype(S), std::string> ||

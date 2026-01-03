@@ -2,11 +2,11 @@
 
 #include <godot_cpp/classes/node.hpp>
 
-namespace ns::inline systems {
+namespace cay::inline systems {
     class AudioPlayer;
 }
 
-namespace ns {
+namespace cay {
     class Main : public godot::Node
     {
         GDCLASS(Main, godot::Node);

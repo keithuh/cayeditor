@@ -27,11 +27,11 @@
     std::forward_as_tuple(godot::Callable(slot_owner, #slot_callback), slot_owner)
 
 /* Binds a property making it visible through the engine inspector. */
-#define bind_property(class_name, prop_name, prop_type)                    \
-    ns::node_property<class_name, prop_type, &class_name::get_##prop_name, \
-                      &class_name::set_##prop_name>::add(#prop_name)
+#define bind_property(class_name, prop_name, prop_type)                     \
+    cay::node_property<class_name, prop_type, &class_name::get_##prop_name, \
+                       &class_name::set_##prop_name>::add(#prop_name)
 
-namespace ns::inline utils {
+namespace cay::inline utils {
     /* Used for function binding, checks the amount of arguments the function has, and binds it
      * accordingly.*/
     template <auto Method>
@@ -141,10 +141,10 @@ namespace ns::inline utils {
             add()
             {
                 if (class_name.empty())
-                    class_name = ns::to<std::string>(object_t::get_class_static());
+                    class_name = cay::to<std::string>(object_t::get_class_static());
                 else
                 {
-                    [[maybe_unused]] std::string temp_name = ns::to<std::string>(
+                    [[maybe_unused]] std::string temp_name = cay::to<std::string>(
                         object_t::get_class_static());
                     runtime_assert(class_name == temp_name);
                 }
@@ -194,7 +194,7 @@ namespace ns::inline utils {
                 static_assert(std::is_same_v<decltype(signal_owner), decltype(m_signal_owner)>);
 
                 m_signal_owner = signal_owner;
-                [[maybe_unused]] const std::string class_name = ns::to<std::string>(
+                [[maybe_unused]] const std::string class_name = cay::to<std::string>(
                     m_signal_owner->get_class());
                 runtime_assert(m_signal_owner->has_signal(signal_name.data()));
             }

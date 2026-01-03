@@ -1,25 +1,7 @@
 {
-    "C_Cpp.autoAddFileAssociations": false,
-    "C_Cpp.autocomplete": "default",
-    "C_Cpp.clang_format_fallbackStyle": "none",
-    "C_Cpp.clang_format_style": "file",
-    "C_Cpp.codeAnalysis.runAutomatically": true,
-    "C_Cpp.commentContinuationPatterns": [
-        "/**",
-        "///"
-    ],
-    "C_Cpp.default.cppStandard": "c++23",
-    "C_Cpp.default.compileCommands": "${workspaceFolder}/.out/build/${command:cmake.activeBuildPresetName}/compile_commands.json",
-    "C_Cpp.default.enableConfigurationSquiggles": true,
-    "C_Cpp.intelliSenseEngine": "default",
-    "C_Cpp.errorSquiggles": "enabled",
-    "C_Cpp.loggingLevel": "Debug",
-    "C_Cpp.enhancedColorization": "enabled",
-    "C_Cpp.formatting": "clangFormat",
     "clang-format.language.cpp.enable": true,
     "clang-format.language.cpp.style": "file",
     "clang-format.assumeFilename": ".clangformat",
-    "C_Cpp.workspaceParsingPriority": "high",
     "cmake.automaticReconfigure": true,
     "cmake.buildBeforeRun": true,
     "cmake.buildTask": false,
@@ -105,4 +87,12 @@
     "workbench.tree.renderIndentGuides": "always",
     "dotnet.defaultSolution": "disable",
     "svg.preview.background": "editor",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--log=verbose",
+        "--pretty",
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/.out/build/clang-debug",
+        "--header-insertion=never"
+    ],
 }
